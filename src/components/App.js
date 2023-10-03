@@ -2,7 +2,7 @@
 import ForecastSummaries from './ForecastSummaries';
 import LocationDetails from './LocationDetails';
 import React from 'react'
-
+import css from '../styles/app.css'
 
 
 function App(props) {

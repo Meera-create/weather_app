@@ -32,9 +32,12 @@ it("renders the summary components correctly",()=>{
 expect(asFragment()).toMatchSnapshot();
 });
 
+it("renders forecast summary the correct number of times",()=>{
+    const {getAllByTestId}=render(
+        <ForecastSummaries forecasts={validProps2} />
+    );
+    expect(getAllByTestId("forecast-summary")).toHaveLength(2)
 
-
-
-
+    })
 
 })
