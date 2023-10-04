@@ -1,5 +1,6 @@
 import React from 'react';
 import ForecastSummary from './ForecastSummary';
+import '../styles/ForecastSummaries.css'
 
 
 function ForecastSummaries({forecasts}){

@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from '../styles/ForecastSummary.css'
 
 function ForecastSummary(props){
 

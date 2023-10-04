@@ -5,7 +5,7 @@
         "jest":true
     },
     "extends": [
-        "plugin:react/recommend",
+        "plugin:react/recommended",
         "airbnb",
         "airbnb/hooks",
         "plugin:prettier/recommended"

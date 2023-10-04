@@ -2,13 +2,13 @@
 import ForecastSummaries from './ForecastSummaries';
 import LocationDetails from './LocationDetails';
 import React from 'react'
-import css from '../styles/app.css'
+import '../styles/App.css'
 
 
 function App(props) {
   const {forecasts, location} = props
   return (
-    <div className="forecast">
+    <div className="weather-app">
      <LocationDetails city={location.city} country={location.country}/>
      <ForecastSummaries forecasts={forecasts}/>
     </div>
