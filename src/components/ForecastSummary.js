@@ -1,5 +1,7 @@
 import React from "react";
-import styles from '../styles/ForecastSummary.css'
+import iconData from '../data/iconData.json'
+
+const weatherCode = iconData.slice(0,1) + "00"
 
 function ForecastSummary(props){
 
@@ -21,7 +23,7 @@ function ForecastSummary(props){
         </div>
         
         <div className='forecast-summary_icon' data-testid='forecast-icon'>
-            {icon}
+            <img src={iconData[weatherapp]}/>
             </div>
         
         <div className='forecast-summary_temperature'>
