@@ -3,7 +3,8 @@ import ForecastSummary from './ForecastSummary';
 import '../styles/ForecastSummaries.css'
 
 
-function ForecastSummaries({forecasts}){
+function ForecastSummaries({forecasts, onForecastSelect}){
+    //console.log(forecasts,"EFJNFNJKESNFJKS")
     return (
         <div className="forecast-summaries">
         {forecasts.map(forecast => (
@@ -12,6 +13,7 @@ function ForecastSummaries({forecasts}){
             date={forecast.date}
             description={forecast.description}
             icon={forecast.icon}
+            onSelect={onForecastSelect}
             temperature={forecast.temperature}
             />
 

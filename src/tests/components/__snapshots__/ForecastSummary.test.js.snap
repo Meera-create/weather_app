@@ -27,6 +27,11 @@ exports[`ForecastSummary renders correctly 1`] = `
     >
       22°C
     </div>
+    <button
+      type="button"
+    >
+      More Details
+    </button>
   </div>
 </DocumentFragment>
 `;

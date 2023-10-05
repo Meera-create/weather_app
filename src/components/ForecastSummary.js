@@ -11,7 +11,7 @@ function ForecastSummary(props){
         icon,
         temperature
     }=props;
-    //console.log(props,"heeeelooo")
+    //console.log(props,"heeeeloooJGHGJHGJH")
 
 
 
@@ -37,6 +37,7 @@ function ForecastSummary(props){
             {temperature.max}
             &deg;C
         </div>
+        <button type="button" onClick={()=> onselect(date)}>More Details</button>
     </div>
     );
 };
