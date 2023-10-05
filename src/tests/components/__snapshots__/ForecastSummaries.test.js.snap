@@ -12,7 +12,7 @@ exports[`Forecast summaries renders the summary components correctly 1`] = `
       <div
         class="forecast-summary_date"
       >
-        111111
+        Thu Jan 01 1970
       </div>
       <div
         class="forecast-summary_description"
@@ -23,7 +23,7 @@ exports[`Forecast summaries renders the summary components correctly 1`] = `
         class="forecast-summary_icon"
         data-testid="forecast-icon"
       >
-        StubIcon
+        <img />
       </div>
       <div
         class="forecast-summary_temperature"
@@ -38,7 +38,7 @@ exports[`Forecast summaries renders the summary components correctly 1`] = `
       <div
         class="forecast-summary_date"
       >
-        222222
+        Thu Jan 01 1970
       </div>
       <div
         class="forecast-summary_description"
@@ -49,7 +49,7 @@ exports[`Forecast summaries renders the summary components correctly 1`] = `
         class="forecast-summary_icon"
         data-testid="forecast-icon"
       >
-        StubIcon2
+        <img />
       </div>
       <div
         class="forecast-summary_temperature"

@@ -33,9 +33,10 @@ describe('ForecastSummary',() => {
                 description={validProps.description}
                 icon={validProps.icon}
                 temperature={validProps.temperature}
+                
             />
         );
-    expect(getByText("111111")).toHaveAttribute("class", "forecast-summary_date");
+    expect(getByText("Thu Jan 01 1970")).toHaveAttribute("class", "forecast-summary_date");
     expect(getByText("Stub description")).toHaveAttribute("class","forecast-summary_description");
     expect(getByTestId("forecast-icon")).toHaveAttribute("class","forecast-summary_icon");
     expect(getByText("22°C")).toHaveAttribute("class","forecast-summary_temperature")

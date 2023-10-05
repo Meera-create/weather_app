@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests forecast details renders the details component correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-details"
+    data-testid="forecast-details"
+  >
+    <div
+      class="forecast-details_humidity"
+    >
+      70
+    </div>
+    <div
+      class="forecast-details_direction"
+    >
+      north
+    </div>
+    <div
+      class="forecast-details_windspeed"
+    >
+      7
+    </div>
+    <div
+      class="forecast-details_temperature"
+    >
+      22°C
+    </div>
+    <div
+      class="forecast-details_date"
+    >
+      Thu Jan 01 1970
+    </div>
+  </div>
+</DocumentFragment>
+`;
