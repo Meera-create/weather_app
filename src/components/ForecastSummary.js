@@ -9,7 +9,8 @@ function ForecastSummary(props){
         date,
         description,
         icon,
-        temperature
+        temperature,
+        onSelect 
     }=props;
     //console.log(props,"heeeeloooJGHGJHGJH")
 
@@ -37,10 +38,11 @@ function ForecastSummary(props){
             {temperature.max}
             &deg;C
         </div>
-        <button type="button" onClick={()=> onselect(date)}>More Details</button>
+        <button type="button" onClick={() => onSelect(date)}>More Details</button>
     </div>
     );
 };
 
 
 export default ForecastSummary
+//error on track on select

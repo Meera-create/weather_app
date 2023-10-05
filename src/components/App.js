@@ -10,7 +10,7 @@ const App = ({forecasts, location}) =>{
   const[selectedDate, setSelectedDate] = useState(forecasts[0].date);
   const selectedForecast = forecasts.find(forecast=>forecast.date===selectedDate);
 
-  function handleForecastSelect(date){
+  const handleForecastSelect=(date)=>{
     setSelectedDate(date)
   };
 
@@ -21,7 +21,7 @@ const App = ({forecasts, location}) =>{
      forecasts={forecasts}
      onForecastSelect={handleForecastSelect}
      />
-     <ForecastDetails forecast={forecasts[0]}/>
+     <ForecastDetails forecast={selectedForecast}/>
     </div>
   );
 };
