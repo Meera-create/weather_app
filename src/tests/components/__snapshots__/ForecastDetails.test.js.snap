@@ -22,7 +22,12 @@ exports[`tests forecast details renders the details component correctly 1`] = `
       7
     </div>
     <div
-      class="forecast-details_temperature"
+      class="forecast-details_temperature_min"
+    >
+      13°C
+    </div>
+    <div
+      class="forecast-details_temperature_max"
     >
       22°C
     </div>

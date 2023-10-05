@@ -9,7 +9,10 @@ describe("tests forecast details",()=>{
             max:22,
             min:13
         },
-        windSpeed:7,
+        wind:{
+            speed:7,
+            direction:"north"
+        },
         date:111111,
         direction:"north",
         humidity:70
@@ -17,12 +20,7 @@ describe("tests forecast details",()=>{
 
     it("renders the details component correctly",()=>{
         const {asFragment} = render(
-            <ForecastDetails
-                date={Validprops3.date}
-                temperature={Validprops3.temperature}
-                windSpeed={Validprops3.windSpeed}
-                direction={Validprops3.direction}
-                humidity={Validprops3.humidity}
+            <ForecastDetails forecast={Validprops3}
             />
         )
 
@@ -32,17 +30,12 @@ describe("tests forecast details",()=>{
     
     it("renders correct values for props",()=>{
         const {getByText} = render(
-            <ForecastDetails
-            temperature={Validprops3.temperature}
-            windSpeed={Validprops3.windSpeed}
-            date={Validprops3.date}
-            direction={Validprops3.direction}
-            humidity={Validprops3.humidity}
+            <ForecastDetails forecast={Validprops3}
             
             />
         );
     //console.log(Validprops3.temperature, "HELLOOOO")
-    expect(getByText("22°C")).toHaveAttribute("class","forecast-details_temperature")
+    expect(getByText("22°C")).toHaveAttribute("class","forecast-details_temperature_max")
     expect(getByText("7")).toHaveAttribute("class","forecast-details_windspeed")
     expect(getByText("Thu Jan 01 1970")).toHaveAttribute("class","forecast-details_date")
     expect(getByText("north")).toHaveAttribute("class","forecast-details_direction")

@@ -1,17 +1,15 @@
-import React from "react";
+//import React from "react";
+
 
 function ForecastDetails(props){
+const {forecast} = props;
+const {date,humidity,wind,temperature}=forecast;
 
-    const{
-        humidity,
-        direction,
-        windSpeed,
-        temperature,
-        date
-    }=props;
-   
     const formattedDate=new Date(date).toDateString();
-    
+    const {min ,max} = temperature
+    const{speed,direction} = wind
+    //console.log(forecast,"HEEEELLLOOOOOOOO")
+
     return(
         <div className="forecast-details" data-testid="forecast-details">
             <div className="forecast-details_humidity">
@@ -21,10 +19,15 @@ function ForecastDetails(props){
                 {direction}
             </div>
             <div className="forecast-details_windspeed">
-                {windSpeed}
+                {speed}
             </div>
-            <div className="forecast-details_temperature">
-                {temperature.max} 
+            <div className="forecast-details_temperature_min">
+                {min} 
+                &deg;C
+                
+            </div>
+            <div className="forecast-details_temperature_max">
+                {max} 
                 &deg;C
                 
             </div>

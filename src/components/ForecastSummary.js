@@ -11,6 +11,10 @@ function ForecastSummary(props){
         icon,
         temperature
     }=props;
+    //console.log(props,"heeeelooo")
+
+
+
 
     const weatherCode = icon.slice(0,1) + "00";
     const formattedDate=new Date(date).toDateString();

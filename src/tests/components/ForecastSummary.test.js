@@ -12,6 +12,7 @@ describe('ForecastSummary',() => {
             min: 12,
             max: 22,
         },
+        
     };
 
     it("renders correctly",() => {
