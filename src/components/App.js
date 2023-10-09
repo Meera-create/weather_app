@@ -1,18 +1,30 @@
 
 import ForecastSummaries from './ForecastSummaries';
 import LocationDetails from './LocationDetails';
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import '../styles/App.css'
 import ForecastDetails from './ForecastDetails';
+import axios from 'axios';
+import { response } from 'express';
+import getForecast from './getForecast';
 
+const App = () =>{
+  const[selectedDate, setSelectedDate] = useState(0);
+  const [forecasts,setForecasts]=useState([]);
+  const [location, setLocation] = useState({city:"",country:""});
 
-const App = ({forecasts, location}) =>{
-  const[selectedDate, setSelectedDate] = useState(forecasts[0].date);
+  //const {city, country} = location
+  
   const selectedForecast = forecasts.find(forecast=>forecast.date===selectedDate);
 
   const handleForecastSelect=(date)=>{
     setSelectedDate(date)
   };
+
+  useEffect(()=>{
+    getForecast(setSelectedDate,setForecasts,setLocation);
+  },[]);
+
 
   return (
     <div className="weather-app">
@@ -21,10 +33,10 @@ const App = ({forecasts, location}) =>{
      forecasts={forecasts}
      onForecastSelect={handleForecastSelect}
      />
-     <ForecastDetails forecast={selectedForecast}/>
+     {selectedForecast && <ForecastDetails forecast={selectedForecast}/>}
     </div>
   );
 };
 
-
 export default App;
+

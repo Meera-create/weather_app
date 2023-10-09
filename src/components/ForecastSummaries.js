@@ -12,7 +12,7 @@ function ForecastSummaries({forecasts, onForecastSelect}){
             key={forecast.date}
             date={forecast.date}
             description={forecast.description}
-            icon={forecast.icon}
+            icon={forecast.icon.toString()}
             onSelect={onForecastSelect}
             temperature={forecast.temperature}
             />
@@ -24,3 +24,5 @@ function ForecastSummaries({forecasts, onForecastSelect}){
 };
 
 export default ForecastSummaries;
+
+//props here is an array of forecasts from forecast.json
