@@ -5,7 +5,6 @@ import React, {useEffect, useState} from 'react'
 import '../styles/App.css'
 import ForecastDetails from './ForecastDetails';
 import axios from 'axios';
-import { response } from 'express';
 import getForecast from './getForecast';
 
 const App = () =>{
