@@ -3,21 +3,22 @@ import iconData from '../data/iconData.json'
 
 
 
-function ForecastSummary(props){
+const ForecastSummary = (props) => {
 
-    const{
+    const {
         date,
         description,
         icon,
         temperature,
-        onSelect 
-    }=props;
-    //console.log(props,"heeeeloooJGHGJHGJH")
+        onSelect
+    } = props;
+   
 
 
 
 
-    const weatherCode = icon.slice(0,1) + "00";
+    const weatherCode = `${icon.slice(0, 1)} 00`;
+
     const formattedDate=new Date(date).toDateString();
 
     return (
@@ -31,7 +32,7 @@ function ForecastSummary(props){
         </div>
         
         <div className='forecast-summary_icon' data-testid='forecast-icon'>
-            <img src={iconData[weatherCode]}/>
+            <img src={iconData[weatherCode]} alt="weather code"/>
             </div>
         
         <div className='forecast-summary_temperature'>
@@ -45,4 +46,3 @@ function ForecastSummary(props){
 
 
 export default ForecastSummary
-//error on track on select

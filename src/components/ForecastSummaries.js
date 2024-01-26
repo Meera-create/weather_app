@@ -3,8 +3,8 @@ import ForecastSummary from './ForecastSummary';
 import '../styles/ForecastSummaries.css'
 
 
-function ForecastSummaries({forecasts, onForecastSelect}){
-    //console.log(forecasts,"EFJNFNJKESNFJKS")
+const ForecastSummaries = ({forecasts, onForecastSelect}) => {
+  
     return (
         <div className="forecast-summaries">
         {forecasts.map(forecast => (
@@ -12,7 +12,7 @@ function ForecastSummaries({forecasts, onForecastSelect}){
             key={forecast.date}
             date={forecast.date}
             description={forecast.description}
-            icon={forecast.icon}
+            icon={forecast.icon.toString()}
             onSelect={onForecastSelect}
             temperature={forecast.temperature}
             />
