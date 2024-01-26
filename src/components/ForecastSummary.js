@@ -17,7 +17,7 @@ const ForecastSummary = (props) => {
 
 
 
-    const weatherCode = `${icon.slice(0, 1)} 00`;
+    const weatherCode = `${icon.slice(0, 1)}00`;
 
     const formattedDate=new Date(date).toDateString();
 

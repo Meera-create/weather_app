@@ -42,16 +42,4 @@ const App = () => {
   
 
 
-//     <div className="weather-app">
-//      <LocationDetails city={location.city} country={location.country}/>
-//      <ForecastSummaries 
-//      forecasts={forecasts}
-//      onForecastSelect={handleForecastSelect}
-//       />
-//       <h1>weather app!!!</h1>
-//      {selectedForecast && (<ForecastDetails forecast={selectedForecast}/>)}
-//     </div>
-//   );
-// };
-
   export default App;
