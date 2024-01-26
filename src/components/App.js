@@ -25,12 +25,19 @@ const App = () => {
 
   return (
     <div className='weather-app'>
+      
+      
+      <h1>Your daily weather App</h1>
+      <h3>Select further details to find out more.</h3>
+      
        <LocationDetails city={location.city} country={location.country}/>
     <ForecastSummaries 
      forecasts={forecasts}
      onForecastSelect={handleForecastSelect}
       />
-      <h1>weather app!!!</h1>
+      
+      <h4>Further details:</h4>
+
     {selectedForecast && (<ForecastDetails forecast={selectedForecast}/>)}
      
 
