@@ -1,10 +1,10 @@
+import React, {useState, useEffect} from "react"
+import ForecastSummaries from "./ForecastSummaries";
+import LocationDetails from "./LocationDetails";
 
-import ForecastSummaries from './ForecastSummaries';
-import LocationDetails from './LocationDetails';
-import React, {useState, useEffect} from 'react'
-import '../styles/App.css'
-import ForecastDetails from './ForecastDetails';
-import getForecast from '../requests/getForecast';
+import "../styles/App.css"
+import ForecastDetails from "./ForecastDetails";
+import getForecast from "../requests/getForecast";
 
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className='weather-app'>
+    <div className="weather-app">
       
       
       <h1>Your daily weather App</h1>
